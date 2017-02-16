@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w4-Rc-vAX">
+                                <rect key="frame" x="0.0" y="188" width="375" height="48"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84724217653274536" green="0.95844823122024536" blue="0.85220879316329956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8w4-Rc-vAX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="cBR-pw-Nmn"/>
+                            <constraint firstItem="8w4-Rc-vAX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gZe-fW-Dz7"/>
+                            <constraint firstAttribute="trailing" secondItem="8w4-Rc-vAX" secondAttribute="trailing" id="kRA-F3-OPm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kN6-B4-g6u"/>
+                    <connections>
+                        <outlet property="splashScreenLabel" destination="8w4-Rc-vAX" id="hyp-Hq-ObR"/>
+                        <segue destination="bZ7-bw-aXE" kind="presentation" identifier="segue" id="H7u-R6-j4Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="35.532233883058474"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="iCj-o3-5o2">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bZ7-bw-aXE" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mrN-AV-gs9"/>
+                        <viewControllerLayoutGuide type="bottom" id="YMY-JB-9ge"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRp-J4-v7e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7S-Ug-SXf">
+                                <rect key="frame" x="54" y="242" width="266" height="183"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93564313650131226" green="0.75811183452606201" blue="0.67659622430801392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T7S-Ug-SXf" firstAttribute="leading" secondItem="VRp-J4-v7e" secondAttribute="leadingMargin" constant="38" id="4Pg-Xn-qKC"/>
+                            <constraint firstItem="T7S-Ug-SXf" firstAttribute="centerX" secondItem="VRp-J4-v7e" secondAttribute="centerX" id="MUx-6A-fgl"/>
+                            <constraint firstItem="T7S-Ug-SXf" firstAttribute="centerY" secondItem="VRp-J4-v7e" secondAttribute="centerY" id="fsq-4h-WVC"/>
+                            <constraint firstItem="T7S-Ug-SXf" firstAttribute="top" secondItem="mrN-AV-gs9" secondAttribute="bottom" constant="222" id="hBw-OJ-sne"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSu-uF-30B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="36"/>
+        </scene>
+    </scenes>
+</document>
