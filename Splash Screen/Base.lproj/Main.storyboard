@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="kN6-B4-g6u"/>
                     <connections>
                         <outlet property="splashScreenLabel" destination="8w4-Rc-vAX" id="hyp-Hq-ObR"/>
-                        <segue destination="bZ7-bw-aXE" kind="presentation" identifier="segue" id="H7u-R6-j4Y"/>
+                        <segue destination="bZ7-bw-aXE" kind="presentation" identifier="segue" id="hw3-th-YSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

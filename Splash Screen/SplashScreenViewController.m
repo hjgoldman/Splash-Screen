@@ -24,10 +24,10 @@
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"SeenSplashScreen"] == NO){
         //animation goes here
-        [UIView animateWithDuration:1.5f delay:1.0f options:UIViewAnimationOptionTransitionCrossDissolve
+        [UIView animateWithDuration:2.0f delay:1.0f options:UIViewAnimationOptionTransitionCrossDissolve
                          animations:^{[self.splashScreenLabel setAlpha:1.0f];}
                          completion:^(BOOL finished) {
-                             [UIView animateWithDuration:1.5f animations:^{
+                             [UIView animateWithDuration:2.0f animations:^{
                                  [self.splashScreenLabel setAlpha:0.0f];
                              } completion:nil];
                          }];
@@ -39,11 +39,12 @@
         NSLog(@"YES");
         
         [self performSegueWithIdentifier:@"segue" sender:self];
+
     }
 }
 
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-
+    
 }
 
 
