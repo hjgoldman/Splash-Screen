@@ -27,26 +27,25 @@
         [UIView animateWithDuration:2.0f delay:1.0f options:UIViewAnimationOptionTransitionCrossDissolve
                          animations:^{[self.splashScreenLabel setAlpha:1.0f];}
                          completion:^(BOOL finished) {
-                             [UIView animateWithDuration:2.0f animations:^{
+                             [UIView animateWithDuration:2.5f animations:^{
                                  [self.splashScreenLabel setAlpha:0.0f];
-                             } completion:nil];
+                             } completion:^(BOOL finished){
+                                 //[self performSegueWithIdentifier:@"segue" sender:self];
+                                 [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(segueMethod) userInfo:nil repeats:NO];
+                             }];
                          }];
         [userDefaults setBool:YES forKey:@"SeenSplashScreen"];
         [userDefaults synchronize];
    
     } else {
-        
-        NSLog(@"YES");
-        
-        [self performSegueWithIdentifier:@"segue" sender:self];
-
+        [NSTimer scheduledTimerWithTimeInterval:.00 target:self selector:@selector(segueMethod) userInfo:nil repeats:NO];
     }
 }
 
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    
-}
 
+-(void) segueMethod{
+    [self performSegueWithIdentifier:@"segue" sender:self];
+}
 
 
 
