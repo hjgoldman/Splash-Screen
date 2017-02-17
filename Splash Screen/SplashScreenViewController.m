@@ -38,7 +38,7 @@
         [userDefaults synchronize];
    
     } else {
-        [NSTimer scheduledTimerWithTimeInterval:.00 target:self selector:@selector(segueMethod) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0.00 target:self selector:@selector(segueMethod) userInfo:nil repeats:NO];
     }
 }
 
